@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="StockYami.exe" version="1.0.0.1" publicKeyToken="434ee3c70ea2dfc7" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="StockYami" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="StockYami.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC 清单选项
+            如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换 
+            requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            指定 requestedExecutionLevel 节点将会禁用文件和注册表虚拟化。
+            如果要利用文件和注册表虚拟化实现向后 
+            兼容性，则删除 requestedExecutionLevel 节点。
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="log4net.dll" size="301056">
+      <assemblyIdentity name="log4net" version="1.2.13.0" publicKeyToken="669E0DDF0BB1AA2A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>S+T1+QNqroZSQIXsuJOuZVL8cx0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockYami.exe" size="12800">
+      <assemblyIdentity name="StockYami" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>bMKHzDMVp3vZxiubJ5rrwcGRBZo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="StockYami.exe.config" size="2212">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>N29YOfIz9zCxWKZH+1wOFEHmnsM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 此应用程序设计使用的所有 Windows 版本的列表。Windows 将会自动选择最兼容的环境。-->
+      <!-- 如果应用程序设计使用 Windows 7，请取消注释以下 supportedOS 节点-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=ChrisZhang-PC\Chris.Zhang" issuerKeyHash="6c440c88447abfc8086b3af8a495bb34239cf5a6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>tDsAwh+pF3qgA94LpA6n8EvOFfs=</DigestValue></Reference></SignedInfo><SignatureValue>LPZx77xt1lbGJq1o1pMvpmO6vD3dn632vuPiVgJ1fbcVBMlZMWzz8YQNEjyR0MjTB+Luu9OlNUct+V+xadVKGP5tkMuU+U7+e5kwVkRSLma9ld0M3BV8PRaiDvRmxabyVhDCXs5d+wSDjJH5f8VV1cilOL1L++vZNZSruAXs+zo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ubxquwAO9qIsIBX4MnbGmEzdvQENuwi0AU+Ms9Bi+PnrPWaub0fUOTM4+u2FR+kWPSp4Ph6rynriTjramFC2VfcrvZIZyAmd/8B6qYceehU7Yev25OnXEePhycLaN/9Nhfx46i0Hy9R7ZQnqR/XA8D5dcfgOm023iPUvksGqYgU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="fb15ce4bf0a70ea40bde03a07a17a91fc2003bb4" Description="" Url=""><as:assemblyIdentity name="StockYami.exe" version="1.0.0.1" publicKeyToken="434ee3c70ea2dfc7" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ChrisZhang-PC\Chris.Zhang</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>RxbCsxA8kIQFRv9LpHOKgfO2etU=</DigestValue></Reference></SignedInfo><SignatureValue>VhblCRoMgFzN8zqj8t97mdoytSxBr89sNYRgcq4WDZTs8yaiURLqhLPrZvJBab9oRtj2soyYnQFGSEcRPRZ08XpGwp8UXPwvLgEDS4lY4CSKXkBqUlqtxn4IuPyMcjHsXqAoeZHHeBi5wd4WcGkNkJrA9LheVZvXVOrw1ubZwfg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ubxquwAO9qIsIBX4MnbGmEzdvQENuwi0AU+Ms9Bi+PnrPWaub0fUOTM4+u2FR+kWPSp4Ph6rynriTjramFC2VfcrvZIZyAmd/8B6qYceehU7Yev25OnXEePhycLaN/9Nhfx46i0Hy9R7ZQnqR/XA8D5dcfgOm023iPUvksGqYgU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB/TCCAWagAwIBAgIQH4wfVYseAJ9FshmVqdNHRzANBgkqhkiG9w0BAQUFADA9MTswOQYDVQQDHjIAQwBoAHIAaQBzAFoAaABhAG4AZwAtAFAAQwBcAEMAaAByAGkAcwAuAFoAaABhAG4AZzAeFw0xNTA0MDYxNzQ0MjdaFw0xNjA0MDUyMzQ0MjdaMD0xOzA5BgNVBAMeMgBDAGgAcgBpAHMAWgBoAGEAbgBnAC0AUABDAFwAQwBoAHIAaQBzAC4AWgBoAGEAbgBnMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5vGq7AA72oiwgFfgydsaYTN29AQ27CLQBT4yz0GL4+es9Zq5vR9Q5Mzj67YVH6RY9Kng+HqvKeuJOOtqYULZV9yu9khnICZ3/wHqphx56FTth6/bk6dcR4+HJwto3/02F/HjqLQfL1HtlCepH9cDwPl1x+A6bTbeI9S+SwapiBQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAC5byhqkXl9ZatnKTUTO348hZHb5V56jfnphfVFk2YBBTsR7U2JwvJbmSp5lA+YUIBskPaKiQ6q3/ld7nhBGz+UczW6do/tyv9kwcVkeQggor0S4SKj/uGVEWGzooKVq8WqDjZFygQ6TRO9DQJ7HVi5ziAjJlHWd28ymqiHT1bM9</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
