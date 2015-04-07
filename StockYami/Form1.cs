@@ -72,7 +72,6 @@ namespace StockYami
                 this.Invoke(new Action(() => webBrowser1.Navigate("http://stock.yamibuy.com/picking_flow.php")));
                 //webBrowser1.Navigate("http://192.168.1.242/picking_flow.php");
                 //webBrowser1.Navigate("http://stock.yamibuy.com/picking_flow.php");
-                //webBrowser1.Navigate("http://127.0.0.1:8080/test2.php");
             }
             else
             {

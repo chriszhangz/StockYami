@@ -8,3 +8,4 @@ C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\o
 C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.csproj.GenerateResource.Cache
 C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.exe
 C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.pdb
+C:\Users\Chris.Zhang\Documents\Visual Studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.csprojResolveAssemblyReference.cache
