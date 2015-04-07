@@ -1,0 +1,10 @@
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\bin\Debug\App.config
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\bin\Debug\StockYami.exe.config
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\bin\Debug\StockYami.exe
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\bin\Debug\StockYami.pdb
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.Form1.resources
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.WarningForm.resources
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.Properties.Resources.resources
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.csproj.GenerateResource.Cache
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.exe
+C:\Users\Chris.Zhang\documents\visual studio 2010\Projects\StockYami\StockYami\obj\x86\Debug\StockYami.pdb
