@@ -46,7 +46,7 @@ namespace StockYami
         /// <param name="msg"></param>
         #region static void WriteInfoLog(Type t, string msg)
 
-        public static void WriteLog(Type t, string msg)
+        public static void WriteLog(string msg)
         {
             loginfo.Info(msg);
         }

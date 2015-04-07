@@ -15,7 +15,10 @@ namespace StockYami
     {
         public WarningForm warningForm = null;
         public int recontimes = 0;
+        public int thisrecontimes = 0;
         string command;
+        string rs;
+        string barcode="";
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +30,7 @@ namespace StockYami
             //Console.WriteLine("Title:" + webBrowser1.DocumentTitle);
             if (webBrowser1.DocumentType == "File" || webBrowser1.DocumentTitle == "502 Bad Gateway")
             {
-                LogHelper.WriteErrorLog("DocumentType:" + webBrowser1.DocumentType + " DocumentTitle:" + webBrowser1.DocumentTitle + " ReadyState:" + webBrowser1.ReadyState);
+                LogHelper.WriteLog("DocumentType:" + webBrowser1.DocumentType + " DocumentTitle:" + webBrowser1.DocumentTitle + " ReadyState:" + webBrowser1.ReadyState);
                 if (warningForm == null)
                 {
                     warningForm = new WarningForm(this);
@@ -35,9 +38,9 @@ namespace StockYami
                     Point p = new Point(Screen.PrimaryScreen.WorkingArea.Width - warningForm.Width, Screen.PrimaryScreen.WorkingArea.Height - warningForm.Height);
                     warningForm.PointToScreen(p);
                     warningForm.Location = p;
-                    if (recontimes > 100)
+                    if (recontimes > 30)
                     {
-                        warningForm.SetRichText("Reconnecting failed.!\nPlease contact IT!");
+                        warningForm.SetRichText("Reconnecting failed!\nPlease contact IT Dept!");
                     }
                     warningForm.Show();
                 }
@@ -46,32 +49,37 @@ namespace StockYami
                     Point p = new Point(Screen.PrimaryScreen.WorkingArea.Width - warningForm.Width, Screen.PrimaryScreen.WorkingArea.Height - warningForm.Height);
                     warningForm.PointToScreen(p);
                     warningForm.Location = p;
-                    if (recontimes > 100)
+                    if (recontimes > 30)
                     {
-                        warningForm.SetRichText("Reconnecting failed.!\nPlease contact IT Dept.!");
+                        warningForm.SetRichText("Reconnecting failed!\nPlease contact IT Dept!");
                     }
                     warningForm.Show();
                 }
-                if (recontimes > 10)
+                if (thisrecontimes > 10)
                 {
                     command = "netsh wlan disconnect";
-                    executeCmd(command); 
+                    rs = executeCmd(command);
+                    LogHelper.WriteErrorLog("netsh wlan disconnect:" + rs);
                     command = "netsh wlan connect name=YAMIBUY";
-                    executeCmd(command);
-                    recontimes = 0;
+                    rs = executeCmd(command);
+                    LogHelper.WriteErrorLog("netsh wlan connect name=YAMIBUY:" + rs);
+                    thisrecontimes = 0;
                 }
                 Thread.Sleep(500);
                 recontimes++;
+                thisrecontimes++;
                 Application.DoEvents();
-                this.Invoke(new Action(() =>webBrowser1.Navigate("http://192.168.1.242/picking_flow.php")));
+                this.Invoke(new Action(() => webBrowser1.Navigate("http://stock.yamibuy.com/picking_flow.php")));
                 //webBrowser1.Navigate("http://192.168.1.242/picking_flow.php");
                 //webBrowser1.Navigate("http://stock.yamibuy.com/picking_flow.php");
                 //webBrowser1.Navigate("http://127.0.0.1:8080/test2.php");
             }
             else
             {
-                LogHelper.WriteErrorLog("DocumentType:" + webBrowser1.DocumentType + " DocumentTitle:" + webBrowser1.DocumentTitle + " ReadyState:" + webBrowser1.ReadyState);
+                barcode = webBrowser1.Document.GetElementById("barcode").GetAttribute("value");
+                LogHelper.WriteLog("DocumentType:" + webBrowser1.DocumentType + " DocumentTitle:" + webBrowser1.DocumentTitle + " barcode:" + barcode);
                 recontimes = 0;
+                thisrecontimes = 0;
                 if (warningForm != null)
                 {
                     warningForm.Close();
@@ -108,6 +116,15 @@ namespace StockYami
             string str = process.StandardOutput.ReadToEnd();
             process.Close();
             return str;
+        }
+
+        private void webBrowser1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                barcode = webBrowser1.Document.GetElementById("barcode").GetAttribute("value");
+                LogHelper.WriteLog("barcode:" + barcode);
+            }
         }
     }
 }
